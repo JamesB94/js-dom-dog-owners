@@ -97,7 +97,7 @@ const createDogCard = (dog) => {
 
 function createForm() {
   //console.log('createForm ')
-
+  dogContainer.innerHTML = ''
   const form = document.createElement("form");
 
   const nameInput = createInput("name");
@@ -129,6 +129,7 @@ function createForm() {
       image: imgInput.value,
     })
 
+    
     const li = document.createElement("li");
     const listContainer = document.querySelector(".dogs-list__button--add");
 
