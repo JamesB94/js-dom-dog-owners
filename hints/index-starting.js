@@ -24,6 +24,7 @@ function createSection() {
 };
 
 const createDogCardDesc = (bio) => {
+  console.log('test',bio)
   const div = document.createElement("div");
   div.className = "main__dog-section__desc";
 
