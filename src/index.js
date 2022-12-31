@@ -33,6 +33,7 @@ function createDogListItem(dog){
 function createSection() {
   //console.log('createSection')
   const section = document.createElement("section");
+  section.setAttribute('style', 'width: 600px; height: 600px;')
   section.className = "main__dog-section";
   return section;
 };
@@ -84,13 +85,17 @@ const createDogCard = (dog) => {
   //the image to the image path on the dog object
 
   const dogImage = document.createElement('img')
-  dogImage.setAttribute('src', dog.image)
+  dogImage.style.width = '400px';
+  dogImage.style.height = '300px';
+
+  dogImage.setAttribute('src', dog.image )
+  //meow.setAttribute('style', 'width: 200px; height: 100px;'))
    //console.log(dogImage)
   
   const desc = createDogCardDesc(dog.bio);
   const bottomSection = createDogCardBottomSection(dog);
 
-  section.append(header, desc, bottomSection,dogImage);
+  section.append(header, dogImage, desc, bottomSection);
 
   return section;
 };
